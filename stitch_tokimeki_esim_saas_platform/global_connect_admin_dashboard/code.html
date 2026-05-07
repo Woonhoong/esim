@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Global Connect Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e0e3e5",
+                    "secondary-container": "#b188ff",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#4a4455",
+                    "on-tertiary-fixed-variant": "#46464f",
+                    "tertiary-fixed": "#e3e1ed",
+                    "secondary-fixed-dim": "#d3bbff",
+                    "surface-container-low": "#f2f4f6",
+                    "on-tertiary-container": "#e7e5f1",
+                    "on-secondary-fixed-variant": "#572ba0",
+                    "surface-container-high": "#e6e8ea",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2d3133",
+                    "primary-container": "#7c3aed",
+                    "secondary-fixed": "#ebdcff",
+                    "on-primary-fixed": "#25005a",
+                    "on-primary": "#ffffff",
+                    "secondary": "#6f46b9",
+                    "surface": "#f7f9fb",
+                    "on-primary-container": "#ede0ff",
+                    "primary-fixed": "#eaddff",
+                    "inverse-primary": "#d2bbff",
+                    "surface-tint": "#732ee4",
+                    "tertiary-container": "#666670",
+                    "tertiary": "#4e4e58",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#260059",
+                    "on-background": "#191c1e",
+                    "inverse-on-surface": "#eff1f3",
+                    "outline": "#7b7487",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#d2bbff",
+                    "on-tertiary-fixed": "#1a1b23",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "surface-variant": "#e0e3e5",
+                    "primary": "#630ed4",
+                    "surface-dim": "#d8dadc",
+                    "background": "#f7f9fb",
+                    "on-primary-fixed-variant": "#5a00c6",
+                    "tertiary-fixed-dim": "#c7c5d1",
+                    "outline-variant": "#ccc3d8",
+                    "on-secondary-container": "#44118d",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "surface-bright": "#f7f9fb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "lg": "24px",
+                    "sm": "8px",
+                    "unit": "4px",
+                    "xs": "4px",
+                    "xl": "48px",
+                    "gutter": "24px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "h1": ["Space Grotesk"],
+                    "h2": ["Space Grotesk"],
+                    "h3": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex">
+<!-- Sidebar Navigation -->
+<aside class="w-64 bg-surface-container-lowest border-r border-outline-variant/20 flex flex-col fixed h-full z-40">
+<div class="px-gutter py-xl">
+<span class="font-h3 text-h3 font-bold tracking-tight text-primary">Global Connect</span>
+</div>
+<nav class="flex-1 px-md space-y-unit">
+<!-- Active Item -->
+<a class="flex items-center gap-md px-md py-sm rounded-lg bg-primary-container text-on-primary-container transition-all group" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-caps uppercase tracking-wider">Dashboard</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors group" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-label-caps uppercase tracking-wider">Orders</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors group" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-label-caps uppercase tracking-wider">Customers</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors group" href="#">
+<span class="material-symbols-outlined" data-icon="package_2">package_2</span>
+<span class="font-label-caps uppercase tracking-wider">Packages</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors group" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span class="font-label-caps uppercase tracking-wider">API Logs</span>
+</a>
+<div class="pt-xl border-t border-outline-variant/10 mt-xl">
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors group" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-caps uppercase tracking-wider">Settings</span>
+</a>
+</div>
+</nav>
+<div class="p-md">
+<div class="glass-panel p-md rounded-xl flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold">
+                    AD
+                </div>
+<div>
+<p class="text-sm font-bold text-on-surface">Admin User</p>
+<p class="text-xs text-on-surface-variant">Super Admin</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex-1 min-h-screen p-gutter md:p-xl space-y-xl">
+<!-- Header / Top Bar -->
+<header class="flex justify-between items-center">
+<div>
+<h1 class="font-h2 text-h2 text-on-background">System Overview</h1>
+<p class="text-on-surface-variant">Real-time performance monitoring for Global Connect global network.</p>
+</div>
+<div class="flex items-center gap-md">
+<button class="bg-surface-container-lowest border border-outline-variant/30 px-md py-sm rounded-lg flex items-center gap-sm font-label-caps hover:bg-surface-container-low transition-colors shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+                    Last 30 Days
+                </button>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-caps hover:opacity-90 transition-opacity shadow-lg shadow-primary/20">
+                    Download Report
+                </button>
+</div>
+</header>
+<!-- Stats Overview Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Total Revenue -->
+<div class="glass-panel p-lg rounded-xl flex flex-col justify-between h-40">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-on-surface-variant font-label-caps uppercase tracking-widest text-xs">Total Revenue</p>
+<h2 class="font-h2 text-h2 mt-unit text-primary">$128,450.20</h2>
+</div>
+<div class="p-sm bg-primary-fixed rounded-lg text-on-primary-fixed">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+</div>
+<div class="flex items-center gap-sm mt-md">
+<span class="text-emerald-600 bg-emerald-50 px-sm py-xs rounded text-xs font-bold">+12.5%</span>
+<span class="text-xs text-on-surface-variant italic">vs last month</span>
+</div>
+</div>
+<!-- Total Orders -->
+<div class="glass-panel p-lg rounded-xl flex flex-col justify-between h-40">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-on-surface-variant font-label-caps uppercase tracking-widest text-xs">Total Orders</p>
+<h2 class="font-h2 text-h2 mt-unit text-on-background">8,142</h2>
+</div>
+<div class="p-sm bg-secondary-fixed rounded-lg text-on-secondary-fixed">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+</div>
+</div>
+<div class="flex items-center gap-sm mt-md">
+<span class="text-emerald-600 bg-emerald-50 px-sm py-xs rounded text-xs font-bold">+5.2%</span>
+<span class="text-xs text-on-surface-variant italic">vs last month</span>
+</div>
+</div>
+<!-- Profit Analytics Sparkline Placeholder -->
+<div class="glass-panel p-lg rounded-xl flex flex-col justify-between h-40">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-on-surface-variant font-label-caps uppercase tracking-widest text-xs">Active Users</p>
+<h2 class="font-h2 text-h2 mt-unit text-secondary">42,890</h2>
+</div>
+<div class="p-sm bg-tertiary-fixed rounded-lg text-on-tertiary-fixed">
+<span class="material-symbols-outlined" data-icon="sensors">sensors</span>
+</div>
+</div>
+<div class="h-10 w-full bg-gradient-to-r from-primary/10 via-secondary/20 to-primary/10 rounded-full flex items-center px-md overflow-hidden">
+<div class="h-1 w-full bg-outline-variant/30 relative">
+<div class="absolute inset-0 bg-primary w-[75%] rounded-full shadow-[0_0_8px_rgba(99,14,212,0.5)]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Revenue Trends Area Chart -->
+<section class="glass-panel p-xl rounded-xl">
+<div class="flex justify-between items-center mb-xl">
+<div>
+<h3 class="font-h3 text-h3 text-on-background">Revenue Trends</h3>
+<p class="text-on-surface-variant">Monthly sales performance across all global regions.</p>
+</div>
+<div class="flex gap-sm">
+<span class="flex items-center gap-xs text-xs font-medium text-on-surface-variant">
+<span class="w-3 h-3 rounded-full bg-primary"></span> Japan
+                    </span>
+<span class="flex items-center gap-xs text-xs font-medium text-on-surface-variant">
+<span class="w-3 h-3 rounded-full bg-secondary"></span> Europe
+                    </span>
+</div>
+</div>
+<!-- Mock Chart Visualization -->
+<div class="relative h-64 w-full flex items-end justify-between gap-md border-b border-outline-variant/20 pb-unit">
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-10">
+<div class="border-b border-on-background w-full"></div>
+<div class="border-b border-on-background w-full"></div>
+<div class="border-b border-on-background w-full"></div>
+<div class="border-b border-on-background w-full"></div>
+</div>
+<!-- Bars representing growth -->
+<div class="flex-1 bg-primary/20 hover:bg-primary/40 transition-colors rounded-t-lg h-[40%] relative group">
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-sm bg-inverse-surface text-inverse-on-surface text-[10px] px-sm py-xs rounded opacity-0 group-hover:opacity-100 transition-opacity">JAN</div>
+</div>
+<div class="flex-1 bg-primary/20 hover:bg-primary/40 transition-colors rounded-t-lg h-[55%]"></div>
+<div class="flex-1 bg-primary/20 hover:bg-primary/40 transition-colors rounded-t-lg h-[45%]"></div>
+<div class="flex-1 bg-primary/40 hover:bg-primary/60 transition-colors rounded-t-lg h-[70%]"></div>
+<div class="flex-1 bg-primary/40 hover:bg-primary/60 transition-colors rounded-t-lg h-[65%]"></div>
+<div class="flex-1 bg-primary/60 hover:bg-primary/80 transition-colors rounded-t-lg h-[85%]"></div>
+<div class="flex-1 bg-primary hover:bg-primary transition-colors rounded-t-lg h-[95%]"></div>
+<div class="flex-1 bg-secondary/40 hover:bg-secondary/60 transition-colors rounded-t-lg h-[60%]"></div>
+<div class="flex-1 bg-secondary/40 hover:bg-secondary/60 transition-colors rounded-t-lg h-[75%]"></div>
+<div class="flex-1 bg-secondary/40 hover:bg-secondary/60 transition-colors rounded-t-lg h-[80%]"></div>
+</div>
+<div class="flex justify-between mt-md px-unit font-label-caps text-[10px] text-on-surface-variant">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span>
+</div>
+</section>
+<!-- Orders Table Section -->
+<section class="glass-panel overflow-hidden rounded-xl">
+<div class="px-xl py-lg border-b border-outline-variant/20 flex justify-between items-center bg-surface-container-low/50">
+<h3 class="font-h3 text-h3 text-on-background">Recent Orders</h3>
+<div class="flex gap-md items-center">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-md" data-icon="search">search</span>
+<input class="pl-xl pr-md py-xs rounded-lg border border-outline-variant/30 bg-surface-container-lowest text-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all" placeholder="Search orders..." type="text"/>
+</div>
+<button class="p-sm hover:bg-surface-container-high rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-low/30 border-b border-outline-variant/10">
+<tr>
+<th class="px-xl py-md font-label-caps text-xs text-on-surface-variant">Order ID</th>
+<th class="px-xl py-md font-label-caps text-xs text-on-surface-variant">Customer</th>
+<th class="px-xl py-md font-label-caps text-xs text-on-surface-variant">Country</th>
+<th class="px-xl py-md font-label-caps text-xs text-on-surface-variant">Plan</th>
+<th class="px-xl py-md font-label-caps text-xs text-on-surface-variant">Amount</th>
+<th class="px-xl py-md font-label-caps text-xs text-on-surface-variant">Status</th>
+<th class="px-xl py-md font-label-caps text-xs text-on-surface-variant text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Order Row 1 -->
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-xl py-md font-mono text-sm text-on-surface">#TK-9021</td>
+<td class="px-xl py-md">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-primary-fixed-dim flex items-center justify-center text-xs font-bold text-on-primary-fixed">SH</div>
+<span class="text-sm font-medium">Sarah Hudson</span>
+</div>
+</td>
+<td class="px-xl py-md text-sm text-on-surface-variant">Japan 🇯🇵</td>
+<td class="px-xl py-md text-sm text-on-surface-variant">Unlimited 10 Days</td>
+<td class="px-xl py-md text-sm font-bold text-on-surface">$24.00</td>
+<td class="px-xl py-md">
+<span class="bg-emerald-100 text-emerald-800 px-sm py-xs rounded-full text-[10px] font-bold uppercase tracking-wider">Completed</span>
+</td>
+<td class="px-xl py-md text-right">
+<button class="text-primary hover:underline font-label-caps text-xs">Details</button>
+</td>
+</tr>
+<!-- Order Row 2 -->
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-xl py-md font-mono text-sm text-on-surface">#TK-8854</td>
+<td class="px-xl py-md">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed-dim flex items-center justify-center text-xs font-bold text-on-secondary-fixed">MK</div>
+<span class="text-sm font-medium">Marc Koppel</span>
+</div>
+</td>
+<td class="px-xl py-md text-sm text-on-surface-variant">Germany 🇩🇪</td>
+<td class="px-xl py-md text-sm text-on-surface-variant">5GB / 30 Days</td>
+<td class="px-xl py-md text-sm font-bold text-on-surface">$18.50</td>
+<td class="px-xl py-md">
+<span class="bg-secondary-container/20 text-secondary-container px-sm py-xs rounded-full text-[10px] font-bold uppercase tracking-wider">Processing</span>
+</td>
+<td class="px-xl py-md text-right">
+<button class="text-primary hover:underline font-label-caps text-xs">Details</button>
+</td>
+</tr>
+<!-- Order Row 3 -->
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-xl py-md font-mono text-sm text-on-surface">#TK-7742</td>
+<td class="px-xl py-md">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed-dim flex items-center justify-center text-xs font-bold text-on-tertiary-fixed">AJ</div>
+<span class="text-sm font-medium">Anita Jone</span>
+</div>
+</td>
+<td class="px-xl py-md text-sm text-on-surface-variant">UK 🇬🇧</td>
+<td class="px-xl py-md text-sm text-on-surface-variant">Global Pass Pro</td>
+<td class="px-xl py-md text-sm font-bold text-on-surface">$55.00</td>
+<td class="px-xl py-md">
+<span class="bg-error-container/20 text-error px-sm py-xs rounded-full text-[10px] font-bold uppercase tracking-wider">Failed</span>
+</td>
+<td class="px-xl py-md text-right">
+<button class="text-primary hover:underline font-label-caps text-xs">Details</button>
+</td>
+</tr>
+<!-- Order Row 4 -->
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-xl py-md font-mono text-sm text-on-surface">#TK-9102</td>
+<td class="px-xl py-md">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-primary-fixed-dim flex items-center justify-center text-xs font-bold text-on-primary-fixed">VL</div>
+<span class="text-sm font-medium">Victor Lee</span>
+</div>
+</td>
+<td class="px-xl py-md text-sm text-on-surface-variant">South Korea 🇰🇷</td>
+<td class="px-xl py-md text-sm text-on-surface-variant">Unlimited 7 Days</td>
+<td class="px-xl py-md text-sm font-bold text-on-surface">$32.00</td>
+<td class="px-xl py-md">
+<span class="bg-emerald-100 text-emerald-800 px-sm py-xs rounded-full text-[10px] font-bold uppercase tracking-wider">Completed</span>
+</td>
+<td class="px-xl py-md text-right">
+<button class="text-primary hover:underline font-label-caps text-xs">Details</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-xl py-md bg-surface-container-low/30 border-t border-outline-variant/10 flex justify-between items-center">
+<span class="text-xs text-on-surface-variant font-label-caps">Showing 1-10 of 1,240 orders</span>
+<div class="flex gap-unit">
+<button class="p-unit border border-outline-variant/20 rounded hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span></button>
+<button class="p-unit border border-outline-variant/20 rounded hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer for the shell -->
+<footer class="fixed bottom-0 left-64 right-0 glass-panel border-t border-outline-variant/20 py-sm px-xl z-30">
+<div class="flex justify-between items-center">
+<span class="text-[10px] font-label-caps text-on-surface-variant">© 2024 Global Connect. Secure Admin Environment.</span>
+<div class="flex gap-lg">
+<a class="text-[10px] font-label-caps text-on-surface-variant hover:text-primary" href="#">System Status: <span class="text-emerald-500 font-bold">Operational</span></a>
+<a class="text-[10px] font-label-caps text-on-surface-variant hover:text-primary" href="#">Help Center</a>
+</div>
+</div>
+</footer>
+</body></html>

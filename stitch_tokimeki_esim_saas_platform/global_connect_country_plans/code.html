@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Global Connect - Country Plans</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-highest": "#e0e3e5",
+                      "secondary-container": "#b188ff",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#4a4455",
+                      "on-tertiary-fixed-variant": "#46464f",
+                      "tertiary-fixed": "#e3e1ed",
+                      "secondary-fixed-dim": "#d3bbff",
+                      "surface-container-low": "#f2f4f6",
+                      "on-tertiary-container": "#e7e5f1",
+                      "on-secondary-fixed-variant": "#572ba0",
+                      "surface-container-high": "#e6e8ea",
+                      "error": "#ba1a1a",
+                      "inverse-surface": "#2d3133",
+                      "primary-container": "#7c3aed",
+                      "secondary-fixed": "#ebdcff",
+                      "on-primary-fixed": "#25005a",
+                      "on-primary": "#ffffff",
+                      "secondary": "#6f46b9",
+                      "surface": "#f7f9fb",
+                      "on-primary-container": "#ede0ff",
+                      "primary-fixed": "#eaddff",
+                      "inverse-primary": "#d2bbff",
+                      "surface-tint": "#732ee4",
+                      "tertiary-container": "#666670",
+                      "tertiary": "#4e4e58",
+                      "on-error": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed": "#260059",
+                      "on-background": "#191c1e",
+                      "inverse-on-surface": "#eff1f3",
+                      "outline": "#7b7487",
+                      "error-container": "#ffdad6",
+                      "primary-fixed-dim": "#d2bbff",
+                      "on-tertiary-fixed": "#1a1b23",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface": "#191c1e",
+                      "surface-variant": "#e0e3e5",
+                      "primary": "#630ed4",
+                      "surface-dim": "#d8dadc",
+                      "background": "#f7f9fb",
+                      "on-primary-fixed-variant": "#5a00c6",
+                      "tertiary-fixed-dim": "#c7c5d1",
+                      "outline-variant": "#ccc3d8",
+                      "on-secondary-container": "#44118d",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#eceef0",
+                      "surface-bright": "#f7f9fb"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "16px",
+                      "lg": "24px",
+                      "sm": "8px",
+                      "unit": "4px",
+                      "xs": "4px",
+                      "xl": "48px",
+                      "gutter": "24px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "h1": ["Space Grotesk"],
+                      "h2": ["Space Grotesk"],
+                      "h3": ["Space Grotesk"],
+                      "body-lg": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                      "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<div class="flex items-center gap-md">
+<span class="font-h3 text-h3 font-bold tracking-tight text-primary">Global Connect</span>
+</div>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="font-body-md text-primary border-b-2 border-primary pb-1 transition-colors" href="#">Destinations</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Compatibility</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Help</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Login</a>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-full font-bold scale-95 active:scale-90 transition-transform">Get eSIM</button>
+</nav>
+<button class="md:hidden p-sm">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-xl">
+<!-- Hero Section with Search -->
+<section class="max-w-container-max mx-auto px-gutter mb-xl">
+<div class="relative h-[300px] rounded-xl overflow-hidden mb-lg group">
+<img alt="Japan Travel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide-angle panoramic view of Mount Fuji during cherry blossom season, with vibrant pink flowers in the foreground and a clear blue sky. The lighting is bright and airy, reflecting a premium travel aesthetic. The color palette features soft lavenders and deep indigos, creating a serene and welcoming atmosphere for travelers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI3Rq2eXEaGopg1Qn65w-uJACkk3xbTtR-I2gAyRLv_MQCTvm7cLjQ-2Wnk_creUnzN_pBWxPq00cxPazysvRsKB9AotEGrA-2DXisrJpBrDPWBn1yi5VbNP3yp5oSvsyf-8iaAPaLBgN5AqxNnITzzljmuUbxFbAQBEigygYNOMiTWexIksehZFrqMX7yEk_BJcGoNF668oNF162astBRSkk-SIbbz_WmL6OXWvj1Od3nTSPZeR42lgfloE6OyGUHpiqyTwWjbdA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-xl">
+<h1 class="font-h1 text-h1 text-white mb-sm">Japan eSIM Plans</h1>
+<p class="text-white/90 font-body-lg">High-speed 5G connectivity across the land of the rising sun.</p>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="glass-card p-md rounded-xl flex items-center gap-md shadow-lg -mt-12 relative z-10 mx-auto max-w-3xl">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-body-lg placeholder:text-on-surface-variant/50" placeholder="Search destinations" type="text"/>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-bold">Search</button>
+</div>
+</section>
+<section class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-lg">
+<!-- Sidebar Filters -->
+<aside class="lg:col-span-3 space-y-lg">
+<div class="glass-card p-lg rounded-xl">
+<h3 class="font-h3 text-h3 text-on-surface mb-md">Filters</h3>
+<!-- Data Capacity -->
+<div class="mb-lg">
+<label class="font-label-caps text-on-surface-variant block mb-sm">DATA CAPACITY</label>
+<div class="space-y-xs">
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-body-md group-hover:text-primary transition-colors">1GB</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input checked="" class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-body-md group-hover:text-primary transition-colors">5GB</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input checked="" class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-body-md group-hover:text-primary transition-colors">10GB</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-body-md group-hover:text-primary transition-colors">Unlimited</span>
+</label>
+</div>
+</div>
+<!-- Validity -->
+<div class="mb-lg">
+<label class="font-label-caps text-on-surface-variant block mb-sm">VALIDITY</label>
+<div class="grid grid-cols-2 gap-xs">
+<button class="border border-outline-variant rounded-lg py-xs px-sm text-sm hover:border-primary hover:text-primary transition-all">7 Days</button>
+<button class="border border-primary bg-primary-fixed text-primary rounded-lg py-xs px-sm text-sm font-bold">15 Days</button>
+<button class="border border-outline-variant rounded-lg py-xs px-sm text-sm hover:border-primary hover:text-primary transition-all">30 Days</button>
+<button class="border border-outline-variant rounded-lg py-xs px-sm text-sm hover:border-primary hover:text-primary transition-all">60 Days</button>
+</div>
+</div>
+<!-- Price Range -->
+<div>
+<label class="font-label-caps text-on-surface-variant block mb-sm">PRICE RANGE</label>
+<input class="w-full accent-primary" type="range"/>
+<div class="flex justify-between text-xs text-on-surface-variant mt-xs">
+<span>$5</span>
+<span>$100+</span>
+</div>
+</div>
+</div>
+<!-- Network Info Card -->
+<div class="bg-primary-container p-lg rounded-xl text-on-primary-container">
+<span class="material-symbols-outlined mb-sm" data-icon="signal_cellular_alt">signal_cellular_alt</span>
+<h4 class="font-bold mb-xs">Local Partners</h4>
+<p class="text-sm opacity-90">Connected with SoftBank &amp; NTT Docomo for best-in-class 5G coverage.</p>
+</div>
+</aside>
+<!-- Plans Grid -->
+<div class="lg:col-span-9">
+<div class="flex justify-between items-center mb-lg">
+<p class="text-on-surface-variant">Showing <span class="font-bold text-on-surface">12 plans</span> for Japan</p>
+<div class="flex items-center gap-sm">
+<span class="text-sm text-on-surface-variant">Sort by:</span>
+<select class="bg-transparent border-none font-bold text-primary focus:ring-0 cursor-pointer">
+<option>Popularity</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Data: Most</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-lg">
+<!-- Plan Card 1 -->
+<div class="glass-card p-lg rounded-xl hover:shadow-xl transition-all border border-transparent hover:border-primary/20 flex flex-col group">
+<div class="flex justify-between items-start mb-md">
+<div class="w-12 h-8 rounded-sm overflow-hidden border border-surface-variant">
+<img alt="Japan" class="w-full h-full object-cover" data-alt="A macro close-up of the Japanese flag waving gently in a soft breeze. The white background is pristine and the red circle is vibrant. The lighting is studio-quality, clean, and minimalist, fitting the brand's premium hospitality aesthetic with high-key brightness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFVaMfjsyH527IRFnEd4jbWlWGzAMr07CG5Ns3Gbm6g-ea2I09gakPdYOEPSVTvSe0vvIpvalR4JGbi4AKz1WaZWzYeBB480OMNBVO0SBWGC4IMfMO2Hi-BspYQWg_RXSyFa5Z12Ot0Ib5OmifIc1LCaJePN73UM6fuXfxONid9Jno8etaxvCshplQiR_vOEAhm1D98nNYi2m5Uh6hB1IcT155rGVMZQNZXbPweWiSO7kJrpU9Sl_zLrilZJe0pvkP1BwE9HhCUG4"/>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold px-sm py-unit rounded-full uppercase tracking-widest">Most Popular</span>
+</div>
+<h3 class="font-h3 text-h3 mb-unit">10GB Data</h3>
+<p class="text-on-surface-variant text-sm mb-lg">Valid for 30 Days</p>
+<div class="space-y-sm mb-lg flex-grow">
+<div class="flex items-center gap-sm text-sm">
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="router">router</span>
+<span class="text-on-surface">Network: <strong>SoftBank 5G</strong></span>
+</div>
+<div class="flex items-center gap-sm text-sm">
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="public">public</span>
+<span class="text-on-surface">Hotspot: <strong>Supported</strong></span>
+</div>
+<div class="flex items-center gap-sm text-sm">
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="bolt">bolt</span>
+<span class="text-on-surface">Instant Activation</span>
+</div>
+</div>
+<div class="pt-lg border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tighter">Total Price</p>
+<p class="text-h3 font-h3 text-primary">$15.00</p>
+</div>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-bold group-hover:scale-105 active:scale-95 transition-all">Buy Now</button>
+</div>
+</div>
+<!-- Plan Card 2 -->
+<div class="glass-card p-lg rounded-xl hover:shadow-xl transition-all border border-transparent hover:border-primary/20 flex flex-col group">
+<div class="flex justify-between items-start mb-md">
+<div class="w-12 h-8 rounded-sm overflow-hidden border border-surface-variant">
+<img alt="Japan" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA025jwsEOUhkOokslIK5c0vwnhLCcSvIPVPrlaLHIAuKQNQc9msUf0-0mtiB4k2Ipr-A7rO5P7NI48-IqmAJxVhKbqChSW6a3rpLmR3N9tg1EkBUbydo64qas9Za6zr09pWz5EYNWhVtd9Dkd5IJ6_PekeW_VIQsToifVf-vj5LQJeT1JEkRE30jPLxnjvE-fjgaXuwxLpRMYFvwUox7QLrww0A6MY8jJMCFPYbnPZQRD5884Hm9G-COqZMplK1m15XWfJ5_AJk58"/>
+</div>
+</div>
+<h3 class="font-h3 text-h3 mb-unit">5GB Data</h3>
+<p class="text-on-surface-variant text-sm mb-lg">Valid for 15 Days</p>
+<div class="space-y-sm mb-lg flex-grow">
+<div class="flex items-center gap-sm text-sm">
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="router">router</span>
+<span class="text-on-surface">Network: <strong>NTT Docomo</strong></span>
+</div>
+<div class="flex items-center gap-sm text-sm">
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="bolt">bolt</span>
+<span class="text-on-surface">Instant Activation</span>
+</div>
+</div>
+<div class="pt-lg border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tighter">Total Price</p>
+<p class="text-h3 font-h3 text-primary">$9.50</p>
+</div>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-bold group-hover:scale-105 active:scale-95 transition-all">Buy Now</button>
+</div>
+</div>
+<!-- Plan Card 3 -->
+<div class="glass-card p-lg rounded-xl hover:shadow-xl transition-all border border-transparent hover:border-primary/20 flex flex-col group">
+<div class="flex justify-between items-start mb-md">
+<div class="w-12 h-8 rounded-sm overflow-hidden border border-surface-variant">
+<img alt="Japan" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBki7seG4zSMChxqtowX8V_WDVMWu9jeFmCnXuND_5cWWbvWdzQZDFisBKeNMgwmp0EV58Facb1kuelhKBn5E127dPiio72bxW-KyUFkNIJEAixshwV9m-8p9rSP69yl6PRYMzSY6jQ7Sn-kK-kMRq3aH5CQ6BccYjXWfHaGFGwGAt8qa2pnSvTdHHbIJIYtN5xMQHOrOO6iXoLtkIDcA0zOF-Ia9qCJ91CallDTTOKmhwXru4FQI1MBghVQ_07wefhK1S9zIAGH00"/>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold px-sm py-unit rounded-full uppercase tracking-widest">Best Value</span>
+</div>
+<h3 class="font-h3 text-h3 mb-unit">Unlimited</h3>
+<p class="text-on-surface-variant text-sm mb-lg">Valid for 30 Days</p>
+<div class="space-y-sm mb-lg flex-grow">
+<div class="flex items-center gap-sm text-sm">
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="router">router</span>
+<span class="text-on-surface">Network: <strong>SoftBank 5G</strong></span>
+</div>
+<div class="flex items-center gap-sm text-sm">
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="public">public</span>
+<span class="text-on-surface">Hotspot: <strong>2GB Limit</strong></span>
+</div>
+<div class="flex items-center gap-sm text-sm">
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="bolt">bolt</span>
+<span class="text-on-surface">Instant Activation</span>
+</div>
+</div>
+<div class="pt-lg border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tighter">Total Price</p>
+<p class="text-h3 font-h3 text-primary">$45.00</p>
+</div>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-bold group-hover:scale-105 active:scale-95 transition-all">Buy Now</button>
+</div>
+</div>
+<!-- Plan Card 4 -->
+<div class="glass-card p-lg rounded-xl hover:shadow-xl transition-all border border-transparent hover:border-primary/20 flex flex-col group">
+<div class="flex justify-between items-start mb-md">
+<div class="w-12 h-8 rounded-sm overflow-hidden border border-surface-variant">
+<img alt="Japan" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqQoDxBNtgMH114Y1c6dtSy30Nfy7o_J0ax9hOQGGlzQn0jQehJJTIEBDqj2D75754M7rAaturZY5Z01yKOjNqEYvjGgGeDcAywMjo8GIBrC-5zl11J-6M4B4vuDmcQCtUEP4bgRogqwOZd6KpjPzDStNq5Omrq88w2GzadcdOL2Vs9_pUX2TeOIqaf5e_YMZJRb1cALr155hF6r-iPbWSOb1c-YOGmE2dsvuqadVjL-a82X2hxv3bskmyPYg8QpqOkU7ZzJ7X6QM"/>
+</div>
+</div>
+<h3 class="font-h3 text-h3 mb-unit">20GB Data</h3>
+<p class="text-on-surface-variant text-sm mb-lg">Valid for 30 Days</p>
+<div class="space-y-sm mb-lg flex-grow">
+<div class="flex items-center gap-sm text-sm">
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="router">router</span>
+<span class="text-on-surface">Network: <strong>NTT Docomo</strong></span>
+</div>
+<div class="flex items-center gap-sm text-sm">
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="bolt">bolt</span>
+<span class="text-on-surface">Instant Activation</span>
+</div>
+</div>
+<div class="pt-lg border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tighter">Total Price</p>
+<p class="text-h3 font-h3 text-primary">$28.00</p>
+</div>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-bold group-hover:scale-105 active:scale-95 transition-all">Buy Now</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-xl flex justify-center gap-sm">
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-primary text-on-primary font-bold">1</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container transition-colors">2</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container transition-colors">3</button>
+<button class="w-10 h-10 rounded-full flex items-center justify-center border border-outline-variant text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-xl border-t border-surface-container-highest">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-lg">
+<div class="col-span-1 md:col-span-1">
+<span class="font-h3 text-h3 text-primary font-bold mb-md block">Global Connect</span>
+<p class="text-on-surface-variant text-sm mb-lg">Your futuristic hospitality partner for global roaming and seamless digital experiences.</p>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-md">Quick Links</h4>
+<ul class="space-y-sm text-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Destinations</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Compatibility</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">How it Works</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-md">Legal</h4>
+<ul class="space-y-sm text-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-md">Connect</h4>
+<div class="flex gap-md">
+<a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">language</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-xl pt-lg border-t border-surface-container-highest text-center text-xs text-on-surface-variant">© 2024 Global Connect. All rights reserved.</div>
+</footer>
+</body></html>

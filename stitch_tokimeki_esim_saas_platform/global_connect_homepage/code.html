@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Global Connect - Stay Connected Everywhere</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e0e3e5",
+                    "secondary-container": "#b188ff",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#4a4455",
+                    "on-tertiary-fixed-variant": "#46464f",
+                    "tertiary-fixed": "#e3e1ed",
+                    "secondary-fixed-dim": "#d3bbff",
+                    "surface-container-low": "#f2f4f6",
+                    "on-tertiary-container": "#e7e5f1",
+                    "on-secondary-fixed-variant": "#572ba0",
+                    "surface-container-high": "#e6e8ea",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2d3133",
+                    "primary-container": "#7c3aed",
+                    "secondary-fixed": "#ebdcff",
+                    "on-primary-fixed": "#25005a",
+                    "on-primary": "#ffffff",
+                    "secondary": "#6f46b9",
+                    "surface": "#f7f9fb",
+                    "on-primary-container": "#ede0ff",
+                    "primary-fixed": "#eaddff",
+                    "inverse-primary": "#d2bbff",
+                    "surface-tint": "#732ee4",
+                    "tertiary-container": "#666670",
+                    "tertiary": "#4e4e58",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#260059",
+                    "on-background": "#191c1e",
+                    "inverse-on-surface": "#eff1f3",
+                    "outline": "#7b7487",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#d2bbff",
+                    "on-tertiary-fixed": "#1a1b23",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "surface-variant": "#e0e3e5",
+                    "primary": "#630ed4",
+                    "surface-dim": "#d8dadc",
+                    "background": "#f7f9fb",
+                    "on-primary-fixed-variant": "#5a00c6",
+                    "tertiary-fixed-dim": "#c7c5d1",
+                    "outline-variant": "#ccc3d8",
+                    "on-secondary-container": "#44118d",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "surface-bright": "#f7f9fb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "lg": "24px",
+                    "sm": "8px",
+                    "unit": "4px",
+                    "xs": "4px",
+                    "xl": "48px",
+                    "gutter": "24px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "h1": ["Space Grotesk"],
+                    "h2": ["Space Grotesk"],
+                    "h3": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 dark:bg-on-background/70 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm h-20">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-full">
+<div class="font-h3 text-h3 font-bold tracking-tight text-primary dark:text-primary-fixed">Global Connect</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 font-body-md hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md hover:text-primary transition-colors" href="#">Compatibility</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md hover:text-primary transition-colors" href="#">Help</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md hover:text-primary transition-colors" href="#">Login</a>
+</div>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-full font-bold scale-95 active:scale-90 transition-transform">Get eSIM</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex flex-col items-center justify-center text-center px-gutter overflow-hidden bg-gradient-to-b from-primary-fixed/20 to-surface">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-container rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary-container rounded-full blur-[120px]"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto">
+<h1 class="font-h1 text-h1 text-on-surface mb-lg">Stay connected wherever you go</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-2xl mx-auto">Instant digital SIM cards for travelers. Skip the roaming fees and activate your data plan in seconds, anywhere in the world.</p>
+<!-- Destination Search Bar -->
+<div class="glass-card p-sm rounded-full shadow-lg border border-outline-variant/30 flex items-center max-w-2xl mx-auto">
+<span class="material-symbols-outlined ml-md text-outline" data-icon="search">search</span>
+<input class="flex-grow bg-transparent border-none focus:ring-0 px-md py-sm font-body-md text-on-surface placeholder:text-outline" placeholder="Where are you traveling to?" type="text"/>
+<button class="bg-primary text-on-primary px-xl py-sm rounded-full font-bold hover:bg-primary-container transition-all">Search</button>
+</div>
+<div class="mt-lg flex items-center justify-center gap-md">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-surface object-cover" data-alt="A close-up portrait of a cheerful traveler using her smartphone in a bright, modern airport terminal. The scene is bathed in soft, natural morning light with high-key whites and clean backgrounds. The image reflects a sense of effortless global connectivity and minimalist high-end travel aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3Nkv3EdiVg5rHYqIHGpDc6oyiGbsSC7jtBijNvbuCDWTZ8UbeP5Gr3e1wJbt18fQyW5Phd_sHPVtjC_ibtaudd5damrTYXFJnY2TmzoOhVv39yMjkvmW-OxF66d1hxrnPlbQ2AUHAl0g2MECX8_viLj0cCZIVOMxyKIMndk6KAjX3H3P8iinEvwyBBNjl5OAUvP8cWD7stxxwPOqa4eZAH-bFd3nFPg2_l39hD4tUM16HzaGgAb8aVK2DMTDhJlQENqJZvhOKewY"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface object-cover" data-alt="A professional male traveler sitting in a luxury lounge, looking at his phone with a relaxed expression. The lighting is bright and airy, emphasizing a minimalist and sophisticated atmosphere. The color palette features soft grays and crisp whites, conveying a feeling of premium digital hospitality and global mobility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSsCGZMlg5L0g3F_nxi0JKXWtUAMczp8RUC6Yw0sbKHxpr4ChaXbU9UH5aB4k2iLf-w5QzoOArN-ZJCRcFnEtN4E2Y36NinSw2hbIrOa_-dsnNKE7x5HLSz4rLxY26fhJryImpyNga2sXxmawpt4dq_FRzw8F0iGCktJfOhBxnv5ZF9Xucdm-jrUr78_Zm9Zfmze67puDbhDLEd5bWIKpF5eB6PttMGU47_9qc8g5Lwief1wJYOxiuBfBkhDsTwMUxkZlcynl2eP0"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface object-cover" data-alt="A young digital nomad working on her laptop in a sun-drenched, minimalist cafe with large glass windows. The lighting is diffused and warm, highlighting a sense of freedom and high-speed connectivity. The environment is clean and spacious, aligned with a modern, futuristic hospitality brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg8LeQDJdXvBFpwdwmFVOWOaXY1MNqvr_pPys0GeewSiyTv1jTqWSk7XzN0BUiGKQbhZtrr8rUOadurPJDsTugrNqVjGPBjkXXQmbPqupuvgbXWknXgpiwLPUvB7nkDPkBwBDHNG5nhDQBDfbWgeWg3_GjxDa1GXaXl5-I0_G3xmrlJ7fhUdN9WpRQTAAKKLR8iNA405QYt37q2s0nrzhjEd6Xr9M6cA_70LUbkfw7pfjIBEmyz615PI0mg73HiIPk7T8BGX1UA2w"/>
+</div>
+<span class="text-body-md text-on-surface-variant">Trusted by 1M+ travelers worldwide</span>
+</div>
+</div>
+</section>
+<!-- Popular Destinations Grid -->
+<section class="max-w-container-max mx-auto px-gutter py-xl">
+<div class="flex justify-between items-end mb-lg">
+<div>
+<h2 class="font-h2 text-h2 text-on-surface">Popular Destinations</h2>
+<p class="font-body-md text-on-surface-variant">Choose from over 200 countries and regions</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-sm hover:underline">
+                    View all <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Japan -->
+<div class="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all bg-surface-container-lowest">
+<img class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A breathtaking view of Mount Fuji framed by vibrant red autumn leaves under a clear, bright blue sky. The lighting is crisp and natural, showcasing a serene and iconic Japanese landscape. The overall aesthetic is clean and high-definition, reflecting a premium travel experience with a soft lavender-tinted sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoW_-HxOwFR0egqvdtyANv1vo4Grzky-4Rm4QqniCzRUz8zdXud9FUP6mN7t0CShDa2VkO9m1Qpi3rYbXb0Us6jnI9ju35tIARqIIAKXtJcQSU1oCnTZBpiDM9elxeMOxsjGkUn37r3bSX5YzVMpcYwUQP3Ead2OllVXUl3WMYSpRnc4FtqPGrJkad6WodCU3dUwl4rsIWjwLHXSmLnIiznOMf31bm3hgPSkrLAQRiOHwqRoZH1UnAM4bfE8ODqqbMarnD0kvenRk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg w-full text-on-primary">
+<h3 class="font-h3 text-h3">Japan</h3>
+<div class="flex justify-between items-center mt-sm">
+<span class="bg-primary/20 backdrop-blur-md px-md py-xs rounded-full text-label-caps font-bold">STARTING FROM $4.50</span>
+</div>
+</div>
+</div>
+<!-- USA -->
+<div class="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all bg-surface-container-lowest">
+<img class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="The New York City skyline at dusk, with the lights of the skyscrapers beginning to glow against a deep indigo sky. The lighting is cinematic yet soft, with low-opacity purple tints in the shadows. The image captures a sense of modern urban energy and high-end technological connectivity in a vast metropolitan setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2YBBPB9rKmd7IMYm3HdCeK9lnOH0yH3di1rNpJHynRYf6FiD9brwmBeGhqz8GYDCbGZ5OG7mJUwvhVLTNGFOmnb9t3qeE4su0kfyF80CyAhTy06uc7rvp6i7J6rESnLGgsNY3Nk_ZX3hP0Mc08Vp9OIl3ChJY30GoEE2PrU1VezMer9pOGIERbQ3Vl6eSgynnb2YausJ2ktSdyOChFqqFrMIFmldT7EsyXH7u189FNk3qzHgfcFcdQj1eCCIMwJ6ZzSr7q2JkjC8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg w-full text-on-primary">
+<h3 class="font-h3 text-h3">USA</h3>
+<div class="flex justify-between items-center mt-sm">
+<span class="bg-primary/20 backdrop-blur-md px-md py-xs rounded-full text-label-caps font-bold">STARTING FROM $5.00</span>
+</div>
+</div>
+</div>
+<!-- UK -->
+<div class="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all bg-surface-container-lowest">
+<img class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A classic London street scene featuring the iconic Big Ben clock tower and a bright red bus, under a bright and airy sky. The lighting is soft and even, highlighting the historical architecture with a modern, high-contrast finish. The aesthetic is clean and premium, consistent with a futuristic hospitality brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdzhb8jISt4Y1BJvN75occXizSSiro8NAsM8ANE0XCGvjzRmp_dIR57UtwFRHtcn6i2eAO8AkBE1Y2YbRnIKbLzJsuRZG5ZGCRg4JcMMvpzHZWkfnBJc26_opEIlXJwWOMJmETskBjZ0KFhVbdN_KATxyYwYpjRKmziH0HfpVcrIgiXw5ebu6IWSQjOlTduJQk_lOeLGKV3r_2h5_QFljRJfo2qvFN3BeU-pdtLdEvY1g9OENl4Ojcp4mPbqnle2q1tu3v__bDTRY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg w-full text-on-primary">
+<h3 class="font-h3 text-h3">United Kingdom</h3>
+<div class="flex justify-between items-center mt-sm">
+<span class="bg-primary/20 backdrop-blur-md px-md py-xs rounded-full text-label-caps font-bold">STARTING FROM $4.00</span>
+</div>
+</div>
+</div>
+<!-- Thailand -->
+<div class="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all bg-surface-container-lowest">
+<img class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stunning view of a traditional long-tail boat on crystal clear turquoise waters in Thailand, surrounded by lush green limestone cliffs. The sun is bright and high, creating sparkling reflections on the water. The mood is tranquil and adventurous, using a palette of vibrant blues and soft whites to suggest speed and reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzJ5sltQ_YxlYuDMGKgqeJ05oQR83PvRhR-9c6zB81R1rxSeSVVEIGU5OIvBnFgEP2xwM3C7IUFNraO6iCgFqNbbCka0_N2xaOfdfOwjhRRjQ3CdAODupBfRYnsfmE9cCVo7IKLzxsX7CKA65eKcCdlYrXO_Wy51uykM1LnZ71aFa1iR4qZGjs6Pm-jv8rr_SZ6OXicXw6JoR_SsrJX0uEO8jYslrFGH_zNW38mAUTEpjL-qsF0IYiHPPJ_qtpZM24DhVW-PaJwDw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg w-full text-on-primary">
+<h3 class="font-h3 text-h3">Thailand</h3>
+<div class="flex justify-between items-center mt-sm">
+<span class="bg-primary/20 backdrop-blur-md px-md py-xs rounded-full text-label-caps font-bold">STARTING FROM $3.50</span>
+</div>
+</div>
+</div>
+<!-- France -->
+<div class="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all bg-surface-container-lowest">
+<img class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="The Eiffel Tower standing elegantly against a soft, pale pink morning sky in Paris. The lighting is warm and diffused, creating a romantic and sophisticated atmosphere. The image uses high-quality whitespace and rhythmic hierarchy to evoke a sense of digital luxury and premium travel service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ22WxP4FXygf24kCLJTCWiwaReXjMNmAVx_FUIRB3kiJnOP05mhrsPnmK6TgSsoZ-lxJEsHhw_suH3D3gMrCb0u-avFZmPdP5IjLadWIOFK-rEz1b_wfRQDgedSf9SfoZPDuk-cqA0M8GMxnWO1rKASaY5v5SJo_wjMRGCv6gs0xcCmz6HrbEtDDSGZfOtHCu7umLl0Fu-xkWC0hz4vhyvEu7T92BzkXMay-3HqJYSegPE1m-YH9wrzpAdytNg2t1MWURkq7pQ_8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg w-full text-on-primary">
+<h3 class="font-h3 text-h3">France</h3>
+<div class="flex justify-between items-center mt-sm">
+<span class="bg-primary/20 backdrop-blur-md px-md py-xs rounded-full text-label-caps font-bold">STARTING FROM $4.50</span>
+</div>
+</div>
+</div>
+<!-- Turkey -->
+<div class="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all bg-surface-container-lowest">
+<img class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Hot air balloons floating over the unique rock formations of Cappadocia, Turkey, at sunrise. The sky is a gradient of soft orange and lavender, with high-key lighting that emphasizes the vast, open space. The scene is majestic and calm, reinforcing the brand's position as a sophisticated leader in the travel-tech sector." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGiALpuYAr0zKktmv-7DaKtq_GsNizOZwcRufzQxFKDuwlfq0LST7NhanmeSuMd5jKuld4z8Av12TkbAX_F8VdW7SfRSivXoLGaEKxZbu6JDFIdILLt9OWx437zNMGWNZgawkqiag7f7rQ9EeGtwXWKPLXk9YhyZFG5FIWHTdlk8fs1xQGZBlvuUPMl_YimSuG4bdgsL8LLmpfvwOfifDw9ZEFZadYIKeMhQBp9v3NiuNUYa7INSMTvyhMszJHmgMtXdwckPfo0PU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg w-full text-on-primary">
+<h3 class="font-h3 text-h3">Turkey</h3>
+<div class="flex justify-between items-center mt-sm">
+<span class="bg-primary/20 backdrop-blur-md px-md py-xs rounded-full text-label-caps font-bold">STARTING FROM $4.00</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="bg-surface-container-low py-xl">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-xl">
+<h2 class="font-h2 text-h2 text-on-surface">Travel Smarter, Not Harder</h2>
+<p class="font-body-md text-on-surface-variant">The future of roaming is here.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-xl">
+<div class="text-center p-lg rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/10">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto mb-lg text-primary">
+<span class="material-symbols-outlined scale-125" data-icon="bolt">bolt</span>
+</div>
+<h3 class="font-h3 text-h3 mb-md">Instant Activation</h3>
+<p class="font-body-md text-on-surface-variant">Get connected the moment you land. No physical SIM cards, no waiting in lines at the airport.</p>
+</div>
+<div class="text-center p-lg rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/10">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto mb-lg text-primary">
+<span class="material-symbols-outlined scale-125" data-icon="no_accounts">no_accounts</span>
+</div>
+<h3 class="font-h3 text-h3 mb-md">No Roaming Fees</h3>
+<p class="font-body-md text-on-surface-variant">Prepaid plans with transparent pricing. Never come home to a surprise phone bill again.</p>
+</div>
+<div class="text-center p-lg rounded-xl bg-surface-container-lowest shadow-sm border border-outline-variant/10">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mx-auto mb-lg text-primary">
+<span class="material-symbols-outlined scale-125" data-icon="public">public</span>
+</div>
+<h3 class="font-h3 text-h3 mb-md">Global Coverage</h3>
+<p class="font-body-md text-on-surface-variant">Reliable 4G/5G networks in over 200 countries. Stay connected even in the most remote corners.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Compatible Devices -->
+<section class="max-w-container-max mx-auto px-gutter py-xl border-b border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+<div>
+<h2 class="font-h2 text-h2 text-on-surface mb-md">Compatible Devices</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">Global Connect works with most modern smartphones. Check if your device is ready for the digital revolution.</p>
+<div class="space-y-md">
+<div class="flex items-center gap-md p-md bg-surface-container rounded-xl">
+<span class="material-symbols-outlined text-primary" data-icon="smartphone">smartphone</span>
+<div>
+<h4 class="font-bold">iPhone</h4>
+<p class="text-label-caps text-on-surface-variant">iPhone XS &amp; Newer</p>
+</div>
+</div>
+<div class="flex items-center gap-md p-md bg-surface-container rounded-xl">
+<span class="material-symbols-outlined text-primary" data-icon="smartphone">smartphone</span>
+<div>
+<h4 class="font-bold">Samsung Galaxy</h4>
+<p class="text-label-caps text-on-surface-variant">S20, Note 20, Z Flip &amp; Newer</p>
+</div>
+</div>
+<div class="flex items-center gap-md p-md bg-surface-container rounded-xl">
+<span class="material-symbols-outlined text-primary" data-icon="smartphone">smartphone</span>
+<div>
+<h4 class="font-bold">Google Pixel</h4>
+<p class="text-label-caps text-on-surface-variant">Pixel 3 &amp; Newer</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 bg-primary/10 blur-3xl rounded-full"></div>
+<img class="relative z-10 rounded-3xl shadow-2xl mx-auto border-8 border-on-surface/5" data-alt="A modern smartphone held by a clean, minimalist hand, showing a sleek eSIM activation interface with a fast-loading progress bar. The background is a soft, lavender gradient with a high-key light effect. The design emphasizes speed, ease of use, and futuristic digital hospitality in a pristine, airy environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCsj8QrwFBKOuV0AccL_6DB8IYOgBvni0QIPx93adDSFsc5WQQMXidbKnCisOCVc0FLHGWaymE2PAeCYgA0nxzYvL1z94IJE9I2DCI3quTWXE6gbC7dsppMK0MoM7bM0yMlbFSzkQ79FlwIujIpwNBc9bTmkNCHL15Z37comjX5D5QUhPLEVfgfD1sxMpF6_-Or-3NPD0s4I-NBkscFEKgPk6XqQjjUcsT6r-TFRiOMdeTz7x-XohFmzngNE4hourXATt49L94v1c"/>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="max-w-container-max mx-auto px-gutter py-xl">
+<h2 class="font-h2 text-h2 text-on-surface text-center mb-xl">Frequently Asked Questions</h2>
+<div class="max-w-3xl mx-auto space-y-md">
+<!-- FAQ 1 -->
+<div class="border border-outline-variant/30 rounded-xl overflow-hidden bg-surface-container-lowest">
+<button class="w-full px-lg py-md text-left flex justify-between items-center hover:bg-surface-container-low transition-colors">
+<span class="font-bold font-body-lg">What is an eSIM and how does it work?</span>
+<span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</button>
+<div class="px-lg pb-md text-on-surface-variant font-body-md">
+                        An eSIM is a digital SIM that allows you to activate a cellular plan from your carrier without having to use a physical nano-SIM. You simply scan a QR code and you're ready to go.
+                    </div>
+</div>
+<!-- FAQ 2 -->
+<div class="border border-outline-variant/30 rounded-xl overflow-hidden bg-surface-container-lowest">
+<button class="w-full px-lg py-md text-left flex justify-between items-center hover:bg-surface-container-low transition-colors">
+<span class="font-bold font-body-lg">Can I keep my WhatsApp number?</span>
+<span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</button>
+<div class="hidden px-lg pb-md text-on-surface-variant font-body-md">
+                        Yes! You can continue using your original phone number for WhatsApp, iMessage, and other apps while using our eSIM for your data connection.
+                    </div>
+</div>
+<!-- FAQ 3 -->
+<div class="border border-outline-variant/30 rounded-xl overflow-hidden bg-surface-container-lowest">
+<button class="w-full px-lg py-md text-left flex justify-between items-center hover:bg-surface-container-low transition-colors">
+<span class="font-bold font-body-lg">When should I install my eSIM?</span>
+<span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</button>
+<div class="hidden px-lg pb-md text-on-surface-variant font-body-md">
+                        We recommend installing your eSIM just before you depart or once you arrive at your destination. The validity period typically begins when the eSIM connects to a supported network.
+                    </div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-container-max mx-auto px-gutter py-xl">
+<div class="bg-primary rounded-3xl p-xl text-center text-on-primary relative overflow-hidden">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+<h2 class="font-h1 text-h1 mb-lg relative z-10">Ready for your next adventure?</h2>
+<p class="font-body-lg text-body-lg mb-xl max-w-2xl mx-auto opacity-90 relative z-10">Join millions of travelers who trust Global Connect for reliable, high-speed data across the globe.</p>
+<div class="flex flex-col sm:flex-row gap-md justify-center relative z-10">
+<button class="bg-surface text-primary px-xl py-md rounded-full font-bold hover:bg-surface-bright transition-all">Get Your eSIM Now</button>
+<button class="bg-transparent border border-surface/30 px-xl py-md rounded-full font-bold hover:bg-white/10 transition-all">Check Compatibility</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-on-background w-full py-xl border-t border-surface-container-highest dark:border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-lg">
+<div class="md:col-span-1">
+<div class="font-h3 text-h3 text-primary dark:text-primary-fixed font-bold mb-md">Global Connect</div>
+<p class="font-body-md text-on-surface-variant mb-lg">Your global concierge for seamless digital connectivity. Explore the world without boundaries.</p>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-bold mb-md text-secondary dark:text-secondary-fixed uppercase text-label-caps">Company</h4>
+<ul class="space-y-sm text-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Press</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Partners</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-bold mb-md text-secondary dark:text-secondary-fixed uppercase text-label-caps">Support</h4>
+<ul class="space-y-sm text-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Destinations</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Support</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Compatibility</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-bold mb-md text-secondary dark:text-secondary-fixed uppercase text-label-caps">Newsletter</h4>
+<p class="text-body-md text-on-surface-variant mb-md">Get travel tips and exclusive deals in your inbox.</p>
+<div class="flex gap-xs">
+<input class="bg-surface rounded-lg border-outline-variant/30 px-md py-xs w-full focus:ring-primary" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary px-md rounded-lg"><span class="material-symbols-outlined" data-icon="send">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-xl pt-lg border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center text-on-surface-variant text-label-caps">
+<div>© 2024 Global Connect. All rights reserved.</div>
+<div class="flex gap-lg mt-md md:mt-0">
+<a class="hover:text-primary" href="#"><span class="material-symbols-outlined" data-icon="public">public</span> English (USD)</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e0e3e5",
+                    "secondary-container": "#b188ff",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#4a4455",
+                    "on-tertiary-fixed-variant": "#46464f",
+                    "tertiary-fixed": "#e3e1ed",
+                    "secondary-fixed-dim": "#d3bbff",
+                    "surface-container-low": "#f2f4f6",
+                    "on-tertiary-container": "#e7e5f1",
+                    "on-secondary-fixed-variant": "#572ba0",
+                    "surface-container-high": "#e6e8ea",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2d3133",
+                    "primary-container": "#7c3aed",
+                    "secondary-fixed": "#ebdcff",
+                    "on-primary-fixed": "#25005a",
+                    "on-primary": "#ffffff",
+                    "secondary": "#6f46b9",
+                    "surface": "#f7f9fb",
+                    "on-primary-container": "#ede0ff",
+                    "primary-fixed": "#eaddff",
+                    "inverse-primary": "#d2bbff",
+                    "surface-tint": "#732ee4",
+                    "tertiary-container": "#666670",
+                    "tertiary": "#4e4e58",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#260059",
+                    "on-background": "#191c1e",
+                    "inverse-on-surface": "#eff1f3",
+                    "outline": "#7b7487",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#d2bbff",
+                    "on-tertiary-fixed": "#1a1b23",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "surface-variant": "#e0e3e5",
+                    "primary": "#630ed4",
+                    "surface-dim": "#d8dadc",
+                    "background": "#f7f9fb",
+                    "on-primary-fixed-variant": "#5a00c6",
+                    "tertiary-fixed-dim": "#c7c5d1",
+                    "outline-variant": "#ccc3d8",
+                    "on-secondary-container": "#44118d",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "surface-bright": "#f7f9fb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "lg": "24px",
+                    "sm": "8px",
+                    "unit": "4px",
+                    "xs": "4px",
+                    "xl": "48px",
+                    "gutter": "24px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "h1": ["Space Grotesk"],
+                    "h2": ["Space Grotesk"],
+                    "h3": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<div class="font-h3 text-h3 font-bold tracking-tight text-primary">Global Connect</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Destinations</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Compatibility</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Help</a>
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1" href="#">Login</a>
+<button class="bg-primary-container text-on-primary-container px-lg py-sm rounded-full font-bold scale-95 active:scale-90 transition-transform">Get eSIM</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-xl px-gutter max-w-container-max mx-auto">
+<!-- Dashboard Header -->
+<header class="mb-xl">
+<h1 class="font-h1 text-h1 text-on-surface mb-xs">Welcome back, Traveler</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg">Manage your global connectivity from one place.</p>
+</header>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg">
+<!-- Left Column: Current Plans -->
+<div class="lg:col-span-8 space-y-lg">
+<!-- Active eSIM Card -->
+<section class="glass-card rounded-xl p-lg shadow-sm">
+<div class="flex justify-between items-start mb-lg">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="cell_tower">cell_tower</span>
+</div>
+<div>
+<h2 class="font-h3 text-h3">Japan Premium Data</h2>
+<span class="bg-secondary-fixed text-on-secondary-fixed text-[10px] px-sm py-[2px] rounded-full font-bold uppercase tracking-wider">Active</span>
+</div>
+</div>
+<button class="bg-primary text-white px-md py-sm rounded-lg flex items-center gap-xs font-bold transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_circle">add_circle</span>
+                            Top-up
+                        </button>
+</div>
+<!-- Progress Bar Section -->
+<div class="space-y-sm mb-lg">
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant">Data Usage</span>
+<span class="font-bold text-on-surface">4.2 GB / 10 GB</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary-container" style="width: 42%"></div>
+</div>
+<div class="flex justify-between text-[12px] text-on-surface-variant">
+<span>Started: Oct 12, 2023</span>
+<span>Remaining: 5.8 GB</span>
+</div>
+</div>
+<!-- Plan Details Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-md border-t border-outline-variant/20 pt-lg">
+<div class="p-md rounded-lg bg-surface-container-low">
+<p class="text-[12px] text-on-surface-variant uppercase font-bold tracking-tight mb-unit">ICCID</p>
+<p class="font-mono text-body-md text-on-surface truncate">8981300000012345678</p>
+</div>
+<div class="p-md rounded-lg bg-surface-container-low">
+<p class="text-[12px] text-on-surface-variant uppercase font-bold tracking-tight mb-unit">Expiry Date</p>
+<p class="font-body-md text-on-surface">Nov 11, 2023</p>
+</div>
+<div class="p-md rounded-lg bg-surface-container-low">
+<p class="text-[12px] text-on-surface-variant uppercase font-bold tracking-tight mb-unit">Network</p>
+<p class="font-body-md text-on-surface">SoftBank 5G</p>
+</div>
+</div>
+</section>
+<!-- Order History -->
+<section class="glass-card rounded-xl overflow-hidden shadow-sm">
+<div class="p-lg border-b border-outline-variant/20">
+<h3 class="font-h3 text-h3">Order History</h3>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant text-[12px] font-bold uppercase tracking-wider">
+<th class="px-lg py-md">Date</th>
+<th class="px-lg py-md">Plan Name</th>
+<th class="px-lg py-md">Amount</th>
+<th class="px-lg py-md">Status</th>
+<th class="px-lg py-md">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr>
+<td class="px-lg py-md text-body-md text-on-surface-variant">Oct 12, 2023</td>
+<td class="px-lg py-md font-bold text-on-surface">Japan 10GB - 30 Days</td>
+<td class="px-lg py-md text-on-surface">$18.00</td>
+<td class="px-lg py-md">
+<span class="text-[12px] text-primary bg-primary-fixed px-sm py-1 rounded-full font-bold">Paid</span>
+</td>
+<td class="px-lg py-md">
+<button class="text-primary hover:underline font-bold text-body-md">Invoice</button>
+</td>
+</tr>
+<tr>
+<td class="px-lg py-md text-body-md text-on-surface-variant">Sep 05, 2023</td>
+<td class="px-lg py-md font-bold text-on-surface">South Korea 5GB - 7 Days</td>
+<td class="px-lg py-md text-on-surface">$12.50</td>
+<td class="px-lg py-md">
+<span class="text-[12px] text-primary bg-primary-fixed px-sm py-1 rounded-full font-bold">Paid</span>
+</td>
+<td class="px-lg py-md">
+<button class="text-primary hover:underline font-bold text-body-md">Invoice</button>
+</td>
+</tr>
+<tr>
+<td class="px-lg py-md text-body-md text-on-surface-variant">Aug 20, 2023</td>
+<td class="px-lg py-md font-bold text-on-surface">Global 1GB - 24 Hours</td>
+<td class="px-lg py-md text-on-surface">$5.00</td>
+<td class="px-lg py-md">
+<span class="text-[12px] text-primary bg-primary-fixed px-sm py-1 rounded-full font-bold">Paid</span>
+</td>
+<td class="px-lg py-md">
+<button class="text-primary hover:underline font-bold text-body-md">Invoice</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- Right Column: Sidebar Actions -->
+<div class="lg:col-span-4 space-y-lg">
+<!-- Activation QR Code Sidebar -->
+<section class="glass-card rounded-xl p-lg shadow-sm border-2 border-primary/20">
+<h3 class="font-h3 text-h3 mb-md text-center">Activation QR</h3>
+<div class="relative bg-white p-lg rounded-xl mb-md border border-outline-variant/20 aspect-square flex items-center justify-center">
+<img alt="QR Code for eSIM activation" class="w-full h-full max-w-[200px]" data-alt="A clean, minimalist QR code displayed on a white glass card background. The code is framed by a thin, glowing purple border. The surrounding interface uses a light lavender background with soft, ambient lighting, conveying a sense of futuristic digital hospitality and ease of use." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9h7WXpklgpCJUDFftsc3NQL_UfCavGWxzMTFybCVlOR9EfOMBu1xaofh66Wt-rAoXwu_oi3vi8Wqe-a8jvMp6b5AZgs5EPgrOH0i6p-cNjO0Dw0jrW1tJRzxA_GHLeWtxoaXHxlvAAokuhDytI7U6aT1s9s9wJxzyQ4ve7wzMQ0Sr96G2jUcM5iIVmHLmnuffu6RyumPabqB1uyBpcw3ksY1fNOH7BalWfGsOB8FcJ7PjRcq0eb2EUi2sKG4QhTRQhJKXjpyV_-U"/>
+</div>
+<div class="text-center space-y-sm">
+<p class="text-body-md text-on-surface-variant">Scan this with your phone's camera to install your eSIM immediately.</p>
+<button class="w-full py-md rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary/5 transition-colors">
+                            How to Install?
+                        </button>
+</div>
+</section>
+<!-- Help/Support Card -->
+<section class="bg-primary rounded-xl p-lg text-white shadow-lg overflow-hidden relative">
+<div class="relative z-10">
+<h4 class="font-h3 text-h3 mb-xs">Need help?</h4>
+<p class="text-white/80 text-body-md mb-lg">Our local experts are available 24/7 to help you stay connected.</p>
+<button class="bg-white text-primary px-lg py-sm rounded-lg font-bold">Contact Support</button>
+</div>
+<!-- Decorative background icon -->
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-[120px] opacity-10" data-icon="support_agent">support_agent</span>
+</section>
+<!-- Promotional Banner -->
+<div class="rounded-xl overflow-hidden aspect-[4/3] relative group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A breathtaking sunset over the Kyoto skyline, featuring the iconic silhouettes of pagodas against a vibrant pink and orange sky. The image has a soft, cinematic blur in the foreground, creating a high-end travel aesthetic. The lighting is warm and golden, evoking the 'Tokimeki' sense of heart-throbbing travel excitement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL2gtOSpEVgddHcN_x3WdiX-yK0t5ejzKadnZRFqlBh6aCz1PalF6PVZb5M0jx4NrwUeP4hUMXa_NR333oCzHjeTfta8EDuWAjnTvVoe8dKqQH8czJtEp_CiyLJn6_gMJjDT3g47vzgNksyurU-Jax5kLzmPognJ729eY4XG7bGbYTEGrIXVi8u7wABmt31Km18kzi30kYjldBec37xo2-cwfN1NrM7tQjy-h-MBp6SGTdI5PyqVXifEQgSvesfu_asoReryOt_jM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 to-transparent flex flex-col justify-end p-lg">
+<h5 class="text-white font-h3 text-h3 mb-xs">Coming Soon?</h5>
+<p class="text-white/90 text-[14px]">Explore new destinations in Southeast Asia with 5G speed.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-surface-container-highest w-full py-xl mt-xl">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-lg">
+<div class="col-span-1 md:col-span-1">
+<div class="font-h3 text-h3 text-primary mb-md">Global Connect</div>
+<p class="text-on-surface-variant text-body-md">Connecting the world, one heartbeat at a time. Seamless travel starts here.</p>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-md uppercase tracking-wider text-[12px]">Product</h4>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Destinations</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Compatibility</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Pricing</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-md uppercase tracking-wider text-[12px]">Support</h4>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Help Center</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Contact Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Installation Guide</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-md uppercase tracking-wider text-[12px]">Legal</h4>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Terms of Service</a></li>
+<li><p class="text-on-surface-variant text-body-md pt-md">© 2024 Global Connect. All rights reserved.</p></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
