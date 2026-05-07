@@ -8,7 +8,8 @@ const redisOptions = {
   })
 };
 
-const connection = new Redis(process.env.REDIS_URL, redisOptions);
+const connectionString = process.env.REDIS_URL;
+const connection = connectionString ? new Redis(connectionString, redisOptions) : new Redis(redisOptions);
 
 connection.on('error', (err) => {
   console.error('Redis connection error:', err);
