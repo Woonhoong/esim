@@ -15,7 +15,15 @@ app.use('/api', apiRoutes);
 
 // Add the webhook route as requested by user explicitly
 // "POST /webhooks/esimaccess"
-app.use('/', apiRoutes); // apiRoutes already handles /webhooks/esimaccess
+app.use('/', apiRoutes);
+
+app.get('/', (req, res) => {
+  res.json({
+    status: 'online',
+    message: 'Tokimeki eSIM API is running successfully',
+    timestamp: new Date().toISOString()
+  });
+});
 
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK' });

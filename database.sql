@@ -1,11 +1,11 @@
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
   email VARCHAR(255) UNIQUE NOT NULL,
   balance DECIMAL(10, 2) DEFAULT 0.00,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE esim_packages (
+CREATE TABLE IF NOT EXISTS esim_packages (
   package_code VARCHAR(100) PRIMARY KEY,
   location_code VARCHAR(100),
   name VARCHAR(255),
@@ -17,7 +17,7 @@ CREATE TABLE esim_packages (
   last_synced TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE esim_orders (
+CREATE TABLE IF NOT EXISTS esim_orders (
   id SERIAL PRIMARY KEY,
   user_id INT REFERENCES users(id),
   transaction_id VARCHAR(100) UNIQUE NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE esim_orders (
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE webhook_logs (
+CREATE TABLE IF NOT EXISTS webhook_logs (
   id SERIAL PRIMARY KEY,
   notify_id VARCHAR(100) UNIQUE NOT NULL,
   notify_type VARCHAR(50),
@@ -41,7 +41,7 @@ CREATE TABLE webhook_logs (
   processed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE usage_logs (
+CREATE TABLE IF NOT EXISTS usage_logs (
   id SERIAL PRIMARY KEY,
   order_no VARCHAR(100),
   iccid VARCHAR(50),
@@ -53,7 +53,7 @@ CREATE TABLE usage_logs (
   logged_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE pricing_history (
+CREATE TABLE IF NOT EXISTS pricing_history (
   id SERIAL PRIMARY KEY,
   package_code VARCHAR(100) REFERENCES esim_packages(package_code),
   old_price DECIMAL(10, 2),
